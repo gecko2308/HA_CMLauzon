@@ -17,7 +17,7 @@ async def async_setup_entry(
     username = entry.data[CONF_USERNAME]
     password = entry.data[CONF_PASSWORD]
 
-    session = aiohttp.ClientSession()
+    session = hass.data[DOMAIN][entry.entry_id]["session"]
     client = CMLauzonClient(username, password, session)
 
     if not await client.authenticate():
