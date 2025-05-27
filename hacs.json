@@ -1,0 +1,8 @@
+{
+  "name": "CM Lauzon",
+  "content_in_root": false,
+  "domains": ["cmlauzon"],
+  "country": "CA",
+  "homeassistant": "2023.0.0",
+  "iot_class": "cloud_polling"
+}

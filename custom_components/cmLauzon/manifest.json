@@ -1,0 +1,10 @@
+{
+  "domain": "cmlauzon",
+  "name": "CM Lauzon RDV",
+  "version": "1.0",
+  "config_flow": true,
+  "requirements": ["requests"],
+  "dependencies": [],
+  "codeowners": ["@gecko2308"],
+  "iot_class": "cloud_polling"
+}

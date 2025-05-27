@@ -1,0 +1,14 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connexion au portail CM Lauzon",
+        "description": "Entrez vos identifiants pour accéder aux rendez-vous.",
+        "data": {
+          "username": "Nom d'utilisateur",
+          "password": "Mot de passe"
+        }
+      }
+    }
+  }
+}
