@@ -1,0 +1,13 @@
+{
+  "domain": "cmlauzon",
+  "name": "CM Lauzon",
+  "codeowners": ["@gecko2308"],
+  "config_flow": true,
+  "documentation": "https://github.com/gecko2308/HA_CMLauzon",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/gecko2308/HA_CMLauzon/issues",
+  "loggers": ["custom_components.cmlauzon"],
+  "requirements": [],
+  "version": "2.0.0"
+}

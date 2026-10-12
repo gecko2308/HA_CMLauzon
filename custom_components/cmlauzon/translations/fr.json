@@ -1,0 +1,62 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connexion au portail CM Lauzon",
+        "description": "Entrez les identifiants de votre compte sur le portail patient de la Clinique médicale Lévis-Lauzon.",
+        "data": {
+          "username": "Courriel",
+          "password": "Mot de passe"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reconnexion au portail CM Lauzon",
+        "description": "Le portail a refusé le mot de passe de {username}. Entrez le mot de passe actuel.",
+        "data": {
+          "password": "Mot de passe"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Courriel ou mot de passe refusé par le portail.",
+      "cannot_connect": "Impossible de joindre le portail. Réessayez plus tard.",
+      "unknown": "Erreur inattendue, consultez le journal."
+    },
+    "abort": {
+      "already_configured": "Ce compte est déjà configuré.",
+      "reauth_successful": "Reconnexion réussie."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options CM Lauzon",
+        "data": {
+          "scan_interval_minutes": "Fréquence de vérification",
+          "days_ahead": "Horizon de recherche",
+          "include_emergency": "Surveiller aussi les rendez-vous d'urgence",
+          "professional_id": "Identifiant du médecin",
+          "clinic_site_id": "Identifiant du site de la clinique",
+          "appointment_type_id": "Type de rendez-vous régulier",
+          "emergency_type_id": "Type de rendez-vous d'urgence"
+        },
+        "data_description": {
+          "scan_interval_minutes": "Évitez de descendre sous 10 minutes pour ne pas surcharger le portail.",
+          "professional_id": "Visible dans l'adresse de la page de prise de rendez-vous du portail."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_regular": { "name": "Prochain rendez-vous disponible" },
+      "next_emergency": { "name": "Prochain rendez-vous d'urgence" },
+      "count_regular": { "name": "Plages disponibles" },
+      "count_emergency": { "name": "Plages d'urgence disponibles" }
+    },
+    "binary_sensor": {
+      "available_regular": { "name": "Rendez-vous disponible" },
+      "available_emergency": { "name": "Rendez-vous d'urgence disponible" }
+    }
+  }
+}

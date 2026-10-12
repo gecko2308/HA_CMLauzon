@@ -1,0 +1,62 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to the CM Lauzon portal",
+        "description": "Enter the credentials of your Clinique médicale Lévis-Lauzon patient portal account.",
+        "data": {
+          "username": "Email",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reconnect to the CM Lauzon portal",
+        "description": "The portal rejected the password for {username}. Enter the current password.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Email or password rejected by the portal.",
+      "cannot_connect": "Unable to reach the portal. Try again later.",
+      "unknown": "Unexpected error, check the log."
+    },
+    "abort": {
+      "already_configured": "This account is already configured.",
+      "reauth_successful": "Reconnected successfully."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "CM Lauzon options",
+        "data": {
+          "scan_interval_minutes": "Polling interval",
+          "days_ahead": "Search horizon",
+          "include_emergency": "Also watch emergency appointments",
+          "professional_id": "Doctor ID",
+          "clinic_site_id": "Clinic site ID",
+          "appointment_type_id": "Regular appointment type",
+          "emergency_type_id": "Emergency appointment type"
+        },
+        "data_description": {
+          "scan_interval_minutes": "Avoid going below 10 minutes so the portal is not overloaded.",
+          "professional_id": "Visible in the URL of the portal's booking page."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_regular": { "name": "Next available appointment" },
+      "next_emergency": { "name": "Next emergency appointment" },
+      "count_regular": { "name": "Available slots" },
+      "count_emergency": { "name": "Available emergency slots" }
+    },
+    "binary_sensor": {
+      "available_regular": { "name": "Appointment available" },
+      "available_emergency": { "name": "Emergency appointment available" }
+    }
+  }
+}
